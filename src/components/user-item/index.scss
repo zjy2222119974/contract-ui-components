@@ -1,0 +1,67 @@
+// UserItem styles. Inherit styles from .follow-list-item in follow-list.scss.
+
+.user-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 16rpx 0;
+
+  .item-left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16rpx;
+    .avatar-placeholder {
+      width: 88rpx;
+      height: 88rpx;
+      background: #ccc;
+      border-radius: 50%;
+    }
+    .item-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8rpx;
+      .item-name {
+        color: #3D3D3D;
+        font-size: 26rpx;
+        font-family: 'Source Han Sans';
+        font-weight: 350;
+      }
+      .item-update {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8rpx;
+        .item-update-text {
+          color: #6600FF;
+          font-size: 20rpx;
+          font-family: 'Source Han Sans';
+          font-weight: 300;
+        }
+        .item-update-icon {
+          width: 28rpx;
+          height: 28rpx;
+          background: #ccc;
+          border-radius: 8rpx;
+        }
+      }
+    }
+  }
+  .item-right {
+    width: 128rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F1F1F1;
+    border-radius: 0;
+    padding: 8rpx 24rpx;
+    .item-followed {
+      color: #333;
+      font-size: 26rpx;
+      font-family: 'Source Han Sans';
+      font-weight: 350;
+    }
+  }
+}

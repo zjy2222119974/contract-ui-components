@@ -1,0 +1,174 @@
+.coupon-card {
+  width: 702rpx;
+  height: 200rpx;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20rpx;
+  background: linear-gradient(to bottom right, rgba(102, 0, 255, 0) 0%, rgba(102, 0, 255, 0.05) 100%), linear-gradient(to bottom right, #F0F0F0 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: 1;
+  box-sizing: border-box;
+  overflow: visible;
+
+  .divider {
+    width: 0;
+    height: 200rpx;
+    border-left: 2rpx dashed #D8D8D8;
+    z-index: 2;
+    flex-shrink: 0;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 40rpx;
+      height: 40rpx;
+      border-radius: 50%;
+      background-color: #FFFFFF; /* Use page background color */
+      z-index: 3;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::before {
+      top: -20rpx; /* Half of the circle extends outside the top of the divider */
+    }
+
+    &::after {
+      bottom: -20rpx; /* Half of the circle extends outside the bottom of the divider */
+    }
+  }
+
+  .left {
+    width: 240rpx;
+    height: 114rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+    .price {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .price-text {
+        font-family: Comfortaa;
+        font-size: 36rpx;
+        font-weight: 300;
+        text-align: center;
+        
+        color: #6600FF;
+        text-align: center;
+      }
+
+      .price-num {
+        font-size: 80rpx;
+        font-family: Comfortaa;
+        font-weight: 500;
+        color: #6600FF;
+        text-align: center;
+      }
+    }
+
+    .text {
+      color: #666;
+      font-size: 24rpx;
+      font-family: 'Source Han Sans', sans-serif;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+
+  .content {
+    height: 120rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12rpx;
+    z-index: 2;
+    margin-left: 20rpx;
+
+    .title {
+      color: #333;
+      font-size: 28rpx;
+      font-family: 'Source Han Sans', sans-serif;
+      font-weight: 350;
+      text-align: center;
+    }
+
+    .desc-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10rpx;
+
+      .desc {
+        color: #666;
+        font-size: 20rpx;
+        font-family: 'Source Han Sans', sans-serif;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      .right-arrow {
+        font-size: 20rpx;
+        color: #666;
+      }
+    }
+
+    .date-row {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 8rpx;
+
+      .date {
+        color: #999;
+        font-size: 20rpx;
+        font-family: 'Source Han Sans', sans-serif;
+        font-weight: 300;
+        text-align: center;
+      }
+    }
+  }
+
+  .use-btn {
+    position: absolute;
+    right: 0;
+    top: 40rpx;
+    height: 64rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10rpx;
+    padding: 12rpx 40rpx 12rpx 24rpx;
+    background: #6600ff;
+    border-top-left-radius: 200rpx;
+    border-bottom-left-radius: 200rpx;
+    box-shadow: 0 8rpx 20rpx 0 rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    box-sizing: border-box;
+
+    .dot {
+      width: 16rpx;
+      height: 16rpx;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .text {
+      color: #fff;
+      font-size: 28rpx;
+      font-family: 'Source Han Sans', sans-serif;
+      font-weight: 350;
+      text-align: center;
+    }
+  }
+}

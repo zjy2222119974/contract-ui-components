@@ -1,0 +1,29 @@
+.checkbox {
+  &.circle {
+    width: 32rpx;
+    height: 32rpx;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    &:not(.checked) {
+      background: #F8F8F8;
+      box-shadow: inset 0 0 0 2rpx #D8D8D8;
+    }
+
+    &.checked {
+      background: #333333;
+
+      .inner-circle {
+        width: 28rpx;
+        height: 28rpx;
+        box-shadow: inset 0 0 0 2rpx #FFFFFF;
+        border-radius: 50%;
+        background: transparent;
+      }
+    }
+  }
+} 

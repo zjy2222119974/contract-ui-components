@@ -1,0 +1,67 @@
+.tab-panel-enhanced {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  &.has-shadow::before {
+    opacity: 1;
+  }
+
+  .panel-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+  }
+
+  .panel-scroll {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .content-grid {
+    display: grid;
+    gap: 24rpx;
+    padding: 0;
+    
+    // 支持不同的列数
+    &.columns-1 {
+      grid-template-columns: 1fr;
+    }
+    
+    &.columns-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    &.columns-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    &.columns-4 {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    // 响应式设计
+    @media (max-width: 750rpx) {
+      &.responsive {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

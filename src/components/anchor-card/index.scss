@@ -1,0 +1,138 @@
+.anchor-card-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  border-radius: 12rpx;
+  width: 702rpx;
+  background: linear-gradient(to right bottom, #F0F0F0 0%, rgba(255, 255, 255, 0) 100%);
+
+
+  .anchor-card-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24rpx;
+    box-sizing: border-box;
+
+    .anchor-card-left {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 24rpx;
+
+      .anchor-card-avatar-wrapper {
+        flex-shrink: 0; 
+        width: 144rpx;
+        height: 144rpx;
+        border-radius: 200rpx;
+        overflow: hidden;
+
+        .anchor-card-avatar-img {
+          width: 100%;
+          height: 100%;
+        }
+        
+      }
+
+      .anchor-card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 16rpx;
+        width: 100%;
+
+        .anchor-card-nickname {
+          color: #333;
+          font-size: 26rpx;
+          font-family: 'Source Han Sans';
+          text-align: left;
+          font-weight: 350;
+        }
+
+        .anchor-card-fans {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 4rpx;
+
+          .anchor-card-fans-icon {
+            
+            font-size: 22rpx;
+          }
+          .anchor-card-fans-text {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            gap: 2rpx;
+            color: #666;
+            font-size: 22rpx;
+            font-family: Comfortaa;
+            font-weight: 300;
+          }
+        }
+
+        .anchor-card-account {
+          display: flex;
+          align-items: center;
+          flex-direction: row;
+          gap: 4rpx;
+
+          .anchor-card-account-icon {
+            
+            font-size: 22rpx;
+          }
+          .anchor-card-account-text {
+            color: #666;
+            font-size: 22rpx;
+            font-family: Comfortaa;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+
+    .anchor-card-follow-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 8rpx;
+      padding: 16rpx 48rpx;
+      background: #000;
+      border-radius: 8rpx;
+      Text {
+        color: #fff;
+        font-size: 24rpx;
+        font-family: 'Source Han Sans';
+        text-align: center;
+        font-weight: 350;
+      }
+    }
+  }
+
+  .anchor-card-work-scroll {
+    width: 100%;
+    padding: 0 0 24rpx 24rpx;
+    box-sizing: border-box;
+    overflow-x: scroll;
+
+    /* 隐藏滚动条（Webkit 浏览器，如 Chrome/Safari） */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    /* 隐藏滚动条（Firefox） */
+    scrollbar-width: none;
+    /* 隐藏滚动条（IE/Edge） */
+    -ms-overflow-style: none;
+
+    .anchor-card-work-list {
+      display: flex;
+      flex-direction: row;
+      gap: 24rpx;
+    }
+  }
+} 

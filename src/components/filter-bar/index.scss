@@ -1,0 +1,105 @@
+// 变量定义
+$height: 88rpx;
+$padding: 24rpx 48rpx;
+$gap: 32rpx;
+$font-size-normal: 28rpx;
+$font-size-active: 28rpx;
+
+
+// 主题颜色
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-text-primary: #333333;
+$color-text-secondary: #666666;
+$color-transparent-bg: rgba(255, 255, 255, 0.15);
+$color-transparent-text: rgba(255, 255, 255, 0.6);
+
+.filter-bar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: $gap;
+  align-items: center;
+  height: $height;
+  padding: $padding;
+  box-sizing: border-box;
+  
+  // 白色主题（默认）
+  &.theme-white {
+    background-color: $color-white;
+    
+    .filter-item {
+      &.active {
+        .filter-text {
+          color: $color-text-primary;
+        }
+      }
+      
+      .filter-text {
+        color: $color-text-secondary;
+      }
+    }
+  }
+
+  // 黑色主题
+  &.theme-black {
+    background-color: $color-black;
+    
+    .filter-item {
+      &.active {
+        .filter-text {
+          color: $color-white;
+        }
+      }
+      
+      .filter-text {
+        color: $color-transparent-text;
+      }
+    }
+  }
+
+  // 透明主题
+  &.theme-transparent {
+    background-color: transparent;
+    
+    .filter-item {
+      &.active {
+        .filter-text {
+          color: $color-white;
+        }
+      }
+      
+      .filter-text {
+        color: $color-transparent-text;
+      }
+    }
+  }
+  
+  // 过滤项样式
+  .filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    width: 64rpx;
+    position: relative;
+    
+    &.active {
+      .filter-text {
+        font-weight: 500;
+        font-size: $font-size-active;
+        transition: all 0.3s ease-out;
+      }
+    }
+    
+    .filter-text {
+      font-size: $font-size-normal;
+      transition: all 0.3s ease-out;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+  }
+} 

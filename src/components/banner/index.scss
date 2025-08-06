@@ -1,0 +1,128 @@
+.banner-container {
+  width: 100%;
+  padding-top: 75%; // 4:3 aspect ratio
+  position: relative;
+  
+  .banner-swiper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    .banner-item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .banner-image {
+      width: 100%;
+      height: 100%;
+    }
+    
+    .banner-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 64rpx 40rpx;
+      box-sizing: border-box;
+    }
+    
+    .banner-title {
+      position: absolute;
+      left: 578rpx;
+      top: 64rpx;
+      width: 148rpx;
+      height: 40rpx;
+      text-align: center;
+      
+      .title-main {
+        font-size: 48rpx;
+        font-family: 'PMingLiU-TW';
+        font-weight: 500;
+        line-height: 40rpx;
+      }
+      
+      .title-sub {
+        font-size: 26rpx;
+        font-family: 'PMingLiU-TW';
+        font-weight: 500;
+        line-height: 40rpx;
+      }
+    }
+    
+    .banner-tag {
+      position: absolute;
+      left: 638rpx;
+      top: 430rpx;
+      height: 100rpx;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4rpx;
+      
+      .tag-text {
+        font-size: 36rpx;
+        font-family: 'BWCKKT';
+        font-weight: 400;
+        line-height: 56rpx;
+        letter-spacing: 3.6rpx;
+        text-align: center;
+      }
+      
+      .tag-badge {
+        padding: 0 12rpx;
+        border-radius: 4rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40rpx;
+        
+        .badge-text {
+          font-size: 16rpx;
+          font-family: 'PMingLiU-TW';
+          font-weight: 500;
+          line-height: 20rpx;
+          text-align: center;
+        }
+      }
+    }
+    
+    .banner-watermark {
+      position: absolute;
+      top: 0;
+      left: 97.07%;
+      font-size: 28rpx;
+      font-family: 'thinoo';
+      font-weight: 100;
+      line-height: 40rpx;
+      letter-spacing: 28rpx;
+      opacity: 0.2;
+      transform: rotate(90deg);
+      transform-origin: 0 0;
+    }
+  }
+}
+
+:global {
+  .weui-swiper-dots {
+    bottom: 40rpx !important;
+    
+    .weui-swiper-dot {
+      width: 12rpx !important;
+      height: 12rpx !important;
+      border-radius: 50% !important;
+      margin: 0 8rpx !important;
+      background: rgba(255, 255, 255, 0.3) !important;
+      
+      &.weui-swiper-dot-active {
+        width: 24rpx !important;
+        border-radius: 12rpx !important;
+        background: #FFFFFF !important;
+      }
+    }
+  }
+} 

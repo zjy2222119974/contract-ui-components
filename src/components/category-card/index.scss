@@ -1,0 +1,64 @@
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16rpx;
+  padding: 16rpx 24rpx 32rpx 24rpx;
+  width: 702rpx;
+  box-sizing: border-box;
+  background: linear-gradient(to right bottom, #F0F0F0 0%, rgba(255, 255, 255, 0) 100%);
+
+  > .category-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 16rpx 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    > .category-card-title {
+      color: #333333;
+      font-size: 26rpx;
+      font-family: 'Source Han Sans';
+      text-align: center;
+      font-weight: 350;
+    }
+    > .category-card-icon {
+      color: #333333;
+      font-size: 32rpx;
+    }
+  }
+
+  > .category-card-sub-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 24rpx;
+    padding: 0;
+    border-radius: 0rpx;
+    width: 654rpx;
+
+    > .category-card-sub-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 16rpx 24rpx 16rpx 24rpx;
+      background: #fff;
+      border-radius: 4rpx;
+      width: 315rpx;
+      box-sizing: border-box;
+
+      > .category-card-sub-title {
+        color: #333333;
+        font-size: 24rpx;
+        font-family: 'Source Han Sans';
+        text-align: center;
+        font-weight: 300;
+      }
+    }
+  }
+} 

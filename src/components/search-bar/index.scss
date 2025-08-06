@@ -1,0 +1,119 @@
+// 基础变量
+$search-bar-height: 112rpx;
+$search-bar-padding: 16rpx 24rpx;
+$input-container-height: 80rpx;
+$button-width: 148rpx;
+$icon-size: 40rpx;
+$border-radius: 100rpx;
+
+// 颜色变量
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-text-primary: #333333;
+$color-text-secondary: #666666;
+$color-transparent-light: rgba(255, 255, 255, 0.15);
+$color-transparent-border: rgba(255, 255, 255, 0.2);
+$color-transparent-text: rgba(255, 255, 255, 0.7);
+
+// 搜索栏基础样式
+.search-bar {
+  width: 100%;
+  box-sizing: border-box;
+  height: $search-bar-height;
+  padding: $search-bar-padding;
+  // box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.05);
+
+  // 搜索框容器
+  .search-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #F8F8F8;
+    border-radius: $border-radius;
+    height: $input-container-height;
+    padding-left: 40rpx;
+  }
+
+  // 图标
+  .search-icon {
+    font-size: $icon-size;
+    color: $color-text-secondary;
+  }
+
+  // 输入框和占位文本
+  .search-input,
+  .placeholder-text {
+    flex: 1;
+    font-size: 26rpx;
+    color: $color-text-secondary;
+  }
+
+
+
+  // 搜索按钮
+  .search-button {
+    background: $color-black;
+    color: $color-white;
+    font-size: 28rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 $border-radius $border-radius 0;
+    margin-left: 16rpx;
+    height: 100%;
+    width: $button-width;
+  }
+}
+
+// 主题变体
+.search-bar {
+  // 黑色主题
+  &.black {
+    .search-input-container {
+      background: $color-transparent-light;
+      border: none;
+    }
+
+    .search-icon {
+      color: $color-white;
+    }
+
+    .search-input,
+    .placeholder-text {
+      color: $color-white;
+    }
+
+    .placeholder {
+      color: $color-transparent-text;
+    }
+  }
+
+  // 透明主题
+  &.transparent {
+    box-shadow: none;
+
+    .search-input-container {
+      background: $color-transparent-light;
+      border: 1rpx solid $color-transparent-border;
+    }
+
+    .search-icon {
+      color: $color-white;
+    }
+
+    .search-input,
+    .placeholder-text {
+      color: $color-white;
+    }
+
+    .placeholder,
+    .placeholder-text {
+      color: $color-transparent-text;
+    }
+
+    .search-button {
+      background: rgba(0, 0, 0, 0.3);
+      color: $color-white;
+    }
+  }
+} 

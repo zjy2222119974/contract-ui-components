@@ -1,0 +1,125 @@
+.tab-title {
+  width: 100%;
+  display: flex;
+  justify-content:flex-start;
+  gap: 32rpx;
+  align-items: center;
+  height: 74rpx;
+  padding: 0 16rpx;
+  
+  // 白色主题（默认）
+  &.theme-white {
+    background-color: #fff;
+    
+    .tab-item {
+      &.active:not(.simple) {
+        &::after {
+          background-color: #000;
+        }
+
+        .tab-text {
+          color: #333;
+        }
+      }
+
+      &.active.simple {
+        .tab-text {
+          color: #333;
+        }
+      }
+      
+      .tab-text {
+        color: #666;
+      }
+    }
+  }
+
+  // 黑色主题
+  &.theme-black {
+    background-color: #333;
+    
+    .tab-item {
+      &.active:not(.simple) {
+        &::after {
+          background-color: #fff;
+        }
+
+        .tab-text {
+          color: #fff;
+        }
+      }
+
+      &.active.simple {
+        .tab-text {
+          color: #fff;
+        }
+      }
+      
+      .tab-text {
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+  }
+  
+  .tab-item {
+    display: flex;
+    align-items:flex-end;
+    height: 100%;
+    padding-bottom: 18rpx;
+    // padding-top: 16rpx;
+    box-sizing: border-box;
+
+    // 默认样式（type=1）的激活状态
+    &.active:not(.simple) {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 52.28rpx;
+        height: 14rpx;
+        background-image: url('../../assets/icons/indi_arcs.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        // background-color: #333;
+        transition: all 0.3s ease-out;
+      }
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 8rpx;
+        height: 8rpx;
+        border-radius: 50%;
+        transition: all 0.3s ease-out;
+      }
+
+      .tab-text {
+        font-weight: 500;
+        font-size: 32rpx;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    // 简单样式（type=2）的激活状态
+    &.active.simple {
+      .tab-text {
+        font-weight: 500;
+        font-size: 32rpx;
+        transition: all 0.3s ease-out;
+      }
+    }
+    
+    // 默认文本样式
+    .tab-text {
+      font-size: 30rpx;
+      transition: all 0.3s ease-out;
+    }
+  }
+} 

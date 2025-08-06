@@ -1,0 +1,63 @@
+.custom-button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+  height: 88rpx;
+  text-align: center;
+  font-family: "Source Han Sans";
+  font-weight: 400;
+  box-sizing: border-box;
+
+  &.primary {
+    background-color: #FFFFFF;
+    color: #333333;
+  }
+
+  &.default {
+    background-color: #f1f1f1;
+    color: #333333;
+  }
+
+  &.small {
+    font-size: 24rpx;
+    height: 54rpx!important;
+  }
+
+  &.medium {
+    font-size: 28rpx;
+    height: 80rpx!important;
+  }
+
+  &.large {
+    font-size: 28rpx;
+    height: 88rpx!important;
+  }
+
+  // Styles for the confirmButton type
+  &.confirmButton {
+    background: #000000;
+    color: #fff;
+    box-sizing: border-box;
+  }
+
+  // Styles for the border type
+  &.border {
+    background-color: #FFFFFF;
+    border: 1rpx solid #000000;
+    color: #000000;
+    // Inherit other styles from .custom-button or adjust as needed
+  }
+
+  &.radius {
+    background-color: #000000;
+    color: #fff;
+    border-radius: 1000rpx;
+    font-size: 28rpx;
+    font-family: 'Source Han Sans';
+    font-weight: 400;
+
+  }
+}

@@ -1,0 +1,183 @@
+// 卡片容器
+.work-card-container.type1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  border-radius: 0;
+  width: 240rpx;
+
+  .work-card-image {
+    width: 240rpx;
+    height: 240rpx;
+    border-top-left-radius: 12rpx;
+    border-top-right-radius: 12rpx;
+    overflow: hidden;
+
+    .work-card-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+
+  .work-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16rpx;
+    padding: 12rpx 0 16rpx 0;
+    background: linear-gradient(to right bottom, #F0F0F0 0%, rgba(255, 255, 255, 0) 100%);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 12rpx;
+    border-bottom-left-radius: 12rpx;
+    width: 240rpx;
+
+    .work-card-title {
+      display: flex;
+      align-self: stretch;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      gap: 32rpx;
+      padding: 0 16rpx;
+      color: #333;
+      font-size: 24rpx;
+      font-family: 'Source Han Sans';
+      text-align: left;
+      font-weight: 300;
+    }
+
+    .work-card-stats {
+      display: flex;
+      align-self: stretch;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row;
+      padding: 0 16rpx;
+
+      .work-card-stat {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        gap: 4rpx;
+
+        .work-card-stat-icon.iconfont {
+          font-size: 24rpx;
+          color: #666;
+        }
+
+        .work-card-stat-text {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+          gap: 2rpx;
+          color: #666;
+          font-size: 20rpx;
+          font-family: Comfortaa;
+          font-weight: 300;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
+
+// type2 样式
+.work-card-container.type2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  border-radius: 0;
+  width: 339rpx;
+
+  .work-card-image {
+    width: 339rpx;
+    height: 339rpx;
+    border-top-left-radius: 24rpx;
+    border-top-right-radius: 24rpx;
+    overflow: hidden;
+
+    .work-card-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
+    }
+  }
+
+  .work-card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16rpx;
+    padding: 12rpx 0 16rpx 0;
+    background: linear-gradient(to right bottom, #F0F0F0 0%, rgba(255, 255, 255, 0) 100%);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 24rpx;
+    border-bottom-left-radius: 24rpx;
+    width: 339rpx;
+
+    .work-card-title {
+      display: flex;
+      align-self: stretch;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+      gap: 32rpx;
+      padding: 0 16rpx;
+      color: #222;
+      font-size: 24rpx;
+      font-family: 'Source Han Sans';
+      text-align: left;
+      font-weight: 400;
+    }
+
+    .work-card-stats {
+      display: flex;
+      align-self: stretch;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row;
+      padding: 0 16rpx;
+
+      .work-card-stat {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        gap: 4rpx;
+
+        .work-card-stat-icon.iconfont {
+          font-size: 28rpx;
+          color: #333;
+        }
+
+        .work-card-stat-text {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+          gap: 2rpx;
+          color: #333;
+          font-size: 22rpx;
+          font-family: Comfortaa;
+          font-weight: 400;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+} 
