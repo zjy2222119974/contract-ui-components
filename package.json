@@ -1,6 +1,6 @@
 {
   "name": "@zjy2222119974/ui-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Contract项目共享UI组件库 - Contract Shared UI Components Library",
   "main": "lib/index.js",
   "module": "es/index.js",
