@@ -32,7 +32,7 @@
 #### 配置npm认证
 ```bash
 # 方法1: 使用npm login
-npm login --scope=@contract --registry=https://npm.pkg.github.com
+npm login --scope=@zjy2222119974 --registry=https://npm.pkg.github.com
 
 # 方法2: 直接配置.npmrc
 echo "//npm.pkg.github.com/:_authToken=YOUR_TOKEN" >> ~/.npmrc
@@ -57,15 +57,15 @@ npm publish
 #### 在项目中安装
 ```bash
 # 在使用项目中配置.npmrc
-echo "@contract:registry=https://npm.pkg.github.com" >> .npmrc
+echo "@zjy2222119974:registry=https://npm.pkg.github.com" >> .npmrc
 
 # 安装包
-npm install @contract/ui-components
+npm install @zjy2222119974/ui-components
 ```
 
 #### 在代码中使用
 ```typescript
-import { TabPanelEnhanced, ProductCard } from '@contract/ui-components'
+import { TabPanelEnhanced, ProductCard } from '@zjy2222119974/ui-components'
 ```
 
 ## 🎯 发布到公共npm
@@ -76,7 +76,7 @@ import { TabPanelEnhanced, ProductCard } from '@contract/ui-components'
 ```json
 // package.json - 移除publishConfig
 {
-  "name": "@contract/ui-components",
+  "name": "@zjy2222119974/ui-components",
   // 移除或注释掉
   // "publishConfig": {
   //   "registry": "https://npm.pkg.github.com"
@@ -87,7 +87,7 @@ import { TabPanelEnhanced, ProductCard } from '@contract/ui-components'
 ```bash
 # .npmrc - 移除GitHub Packages配置
 # 注释掉或删除这行
-# @contract:registry=https://npm.pkg.github.com
+# @zjy2222119974:registry=https://npm.pkg.github.com
 ```
 
 ### 2. 发布到npm

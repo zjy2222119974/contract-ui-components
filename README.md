@@ -1,19 +1,19 @@
-# @contract/ui-components
+# @zjy2222119974/ui-components
 
 Contract 共享 UI 组件库
 
 ## 📦 安装
 
 ```bash
-npm install @contract/ui-components
+npm install @zjy2222119974/ui-components
 # 或
-yarn add @contract/ui-components
+yarn add @zjy2222119974/ui-components
 ```
 
 ## 🚀 使用
 
 ```tsx
-import { TabPanelEnhanced, CardContainer, ProductCard } from '@contract/ui-components'
+import { TabPanelEnhanced, CardContainer, ProductCard } from '@zjy2222119974/ui-components'
 
 // 使用增强版 TabPanel
 <TabPanelEnhanced<ProductData>

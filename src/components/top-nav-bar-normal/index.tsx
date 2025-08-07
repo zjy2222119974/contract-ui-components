@@ -9,8 +9,8 @@ import './index.scss'
 // 工具函数
 import globalState from '../../utils/globalState'
 
-// 配置
-import { navItems } from '../../custom-tab-bar/config'
+// 配置 - 使用默认配置
+// import { navItems } from '../../custom-tab-bar/config'
 
 interface TopNavBarNormalProps {
   theme?: 'white' | 'black' | 'transparent'

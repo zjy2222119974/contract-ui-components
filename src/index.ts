@@ -61,5 +61,5 @@ export { default as globalState, useGlobalState } from './utils/globalState'
 export { GestureHandler } from './utils/gesture'
 export type { SwipeDirection } from './utils/gesture'
 
-// 样式
-export './styles/index.scss'
+// 样式文件需要在使用项目中单独引入
+// import '@zjy2222119974/ui-components/styles/index.scss'
