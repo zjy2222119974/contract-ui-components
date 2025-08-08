@@ -1,6 +1,6 @@
 {
   "name": "@zjy2222119974/ui-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Contract项目共享UI组件库 - Contract Shared UI Components Library",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -12,8 +12,10 @@
   ],
   "scripts": {
     "build": "npm run build:lib && npm run build:es",
-    "build:lib": "tsc -p tsconfig.build.json",
-    "build:es": "tsc -p tsconfig.build.json --module es2015 --outDir es",
+    "build:lib": "tsc -p tsconfig.build.json && npm run copy-styles:lib",
+    "build:es": "tsc -p tsconfig.build.json --module es2015 --outDir es && npm run copy-styles:es",
+    "copy-styles:lib": "node scripts/copy-styles.js lib",
+    "copy-styles:es": "node scripts/copy-styles.js es",
     "build:watch": "npm run build:lib -- --watch",
     "clean": "rimraf lib es",
     "prepublishOnly": "npm run clean && npm run build",

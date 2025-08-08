@@ -33,6 +33,67 @@ import { TabPanelEnhanced, CardContainer, ProductCard } from '@zjy2222119974/ui-
 import '@zjy2222119974/ui-components/styles/index.scss'
 ```
 
+## ⚠️ 重要说明：SCSS 文件处理
+
+### 问题描述
+如果遇到 SCSS 文件无法解析的错误，如：
+```
+resolve './index.scss' in '.../node_modules/@zjy2222119974/ui-components/es/components/actionsheet'
+```
+
+这是因为组件库使用 SCSS 文件，需要在使用项目中配置 SCSS 处理器。
+
+### 解决方案
+
+#### 方案一：配置 Webpack（推荐）
+在使用项目的 webpack 配置中添加 SCSS 处理器：
+
+```javascript
+// webpack.config.js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      }
+    ]
+  }
+}
+```
+
+#### 方案二：配置 Taro
+在 Taro 项目的配置文件中添加 SCSS 支持：
+
+```javascript
+// config/index.js
+module.exports = {
+  mini: {
+    webpackChain(chain) {
+      chain.module
+        .rule('scss')
+        .test(/\.scss$/)
+        .use('sass-loader')
+        .loader('sass-loader')
+    }
+  }
+}
+```
+
+#### 方案三：使用 CSS 替代
+如果不想处理 SCSS，可以只引入编译后的 CSS：
+
+```tsx
+// 只引入主样式文件，不引入组件内的 SCSS
+import '@zjy2222119974/ui-components/styles/index.scss'
+```
+
+然后在组件中手动添加样式类名，而不依赖组件内的 SCSS 导入。
+
 ## 📚 组件详细文档
 
 ### 容器组件
